@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1325">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SPY司会室">
+  <meta name="description" content="家族スパイゲーム 司会進行用オフライン対応アプリ">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>SPY GAME | 司会室</title>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="メインナビゲーション">
+      <div class="identity">
+        <div class="logo-mark">S<span>✦</span></div>
+        <div><div class="identity-title">SPY GAME</div><div class="identity-caption">FAMILY GAME MASTER</div></div>
+      </div>
+      <div class="nav-label">ゲームの進行</div>
+      <nav id="navigation" class="nav-items"></nav>
+      <div class="sidebar-bottom">
+        <div class="tiny-status"><span class="status-dot"></span><span id="offlineStatus">保存はこの端末のみ</span></div>
+        <div class="tiny-help">すべての記録はiPad内に保存。<br>写真・回答のアップロードなし。</div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="crumb"><span class="crumb-dot">✦</span><span id="crumbText">司会室</span></div>
+        <div class="top-actions">
+          <div id="topTimer" class="top-timer" aria-live="off"></div>
+          <button class="icon-button top-home" data-nav="home" title="ホームへ">⌂</button>
+        </div>
+      </header>
+      <main id="app" class="app" tabindex="-1"></main>
+      <footer class="mobile-nav" id="mobileNavigation" aria-label="モバイルナビゲーション"></footer>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div id="modalContent" class="modal" role="dialog" aria-modal="true"></div></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

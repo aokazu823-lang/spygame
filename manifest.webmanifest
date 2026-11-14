@@ -1,0 +1,16 @@
+{
+  "name":"SPY GAME 司会室",
+  "short_name":"SPY司会室",
+  "description":"家族スパイゲームの司会進行サポート",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#080f1d",
+  "theme_color":"#0b1325",
+  "orientation":"any",
+  "lang":"ja",
+  "icons":[
+    {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
