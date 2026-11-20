@@ -4,3 +4,39 @@
 @media(max-width:800px){.sidebar{display:none}.topbar{height:60px;padding:0 17px}.app{padding:23px 17px 105px}.mobile-nav{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;gap:3px;background:#0d1a2c;border-top:1px solid var(--stroke2);padding:9px 7px calc(8px + env(safe-area-inset-bottom));z-index:6}.mobile-nav .mob-link{border:0;background:transparent;color:var(--subtle);font-size:10px;min-width:0;display:grid;justify-items:center;gap:4px;padding:3px}.mobile-nav .mob-link span:first-child{font-size:21px}.mobile-nav .mob-link.active{color:var(--accent)}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:14px}.game-tile{min-height:200px}.hero .bigstar{display:none}.hero{grid-template-columns:1fr}}
 @media(max-width:560px){.grid,.grid-3{grid-template-columns:1fr}.game-details{grid-template-columns:1fr}.count-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.pick-list{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.pick-box{padding:10px 2px}.pick-box strong{font-size:12px}.name-list{gap:4px}.name-card{padding:9px 3px}.name-card .name{font-size:11px}.name-card .sub{font-size:9px}.action-row{flex-direction:column}.action-row .btn{width:100%}.timer-value{font-size:66px}.hero{padding:22px}.hero .hero-title{font-size:36px}.card{padding:18px}.data-table{font-size:11px}.data-table td,.data-table th{padding:10px 5px}.history-row{grid-template-columns:45px 1fr 65px 72px;font-size:11px}.input-grid{grid-template-columns:1fr}.top-timer{font-size:11px}.playing-card{min-width:85px}.hide-mobile{display:none}}
 @media print{body{background:#fff;color:#000}.sidebar,.topbar,.mobile-nav,.btn,.toast{display:none!important}.workspace{width:100%}.app{padding:0;margin:0;max-width:none}.card{box-shadow:none;background:white;color:black;border:1px solid #aaa}.print-only{display:block}}
+
+/* MISSION 05: 子どもと黒子用の特大ひらがな表示 */
+.kana-stage{padding:24px;max-width:950px;margin:0 auto}
+.kana-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:15px}
+.kana-progress{font-weight:900;font-size:22px;color:var(--text);white-space:nowrap}
+.kana-progress strong{font-size:clamp(37px,5vw,62px);color:var(--accent);font-variant-numeric:tabular-nums}
+.kana-progress span{font-size:17px;color:var(--muted)}
+.kana-progress.reached strong{color:var(--mint)}
+.kana-panel{min-height:310px;border-radius:23px;background:radial-gradient(ellipse at 50% 30%,rgba(255,198,128,.11),transparent 65%),#081527;border:1px solid var(--stroke2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 10px 23px}
+.kana-caption{font-size:14px;font-weight:750;color:var(--muted)}
+.kana-letter{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:clamp(180px,28vw,310px);font-weight:900;line-height:1.18;color:#fff;user-select:none;-webkit-user-select:none}
+.kana-support{font-size:13px;color:var(--muted);text-align:center;line-height:1.5}
+.kana-controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.kana-main-btn{min-height:78px!important;font-size:clamp(16px,2vw,22px)!important}
+.kana-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:17px;color:var(--muted);font-size:12px;line-height:1.6}
+@media(max-width:800px){.kana-panel{min-height:300px}.kana-letter{font-size:clamp(170px,36vw,260px)}}
+@media(max-width:560px){.kana-stage{padding:16px}.kana-panel{min-height:280px}.kana-letter{font-size:clamp(160px,46vw,230px)}.kana-controls{grid-template-columns:1fr;gap:10px}.kana-main-btn{min-height:62px!important}.kana-footer{align-items:flex-start;flex-direction:column}}
+
+/* v1.3: 数字並び／図形で伝えろ！ の操作画面 */
+.sidebar{overflow-y:auto;overscroll-behavior:contain}
+.nav-btn{padding:11px 13px;min-height:44px}
+.number-lineup{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:18px}
+.number-position{border-radius:13px;border:1px solid var(--stroke2);background:var(--panel2);padding:12px 8px;display:grid;gap:8px;min-width:0}
+.number-position .select{width:100%;min-width:0;padding-left:8px;padding-right:4px;font-size:13px}
+.shape-stage{max-width:1050px;margin:0 auto}
+.shape-progress{display:flex;justify-content:center;gap:35px;margin:20px 0;font-weight:800;color:var(--muted);flex-wrap:wrap}
+.shape-progress strong{color:var(--mint);font-size:32px;font-variant-numeric:tabular-nums}
+.shape-prompt{min-height:260px;border:1px solid var(--stroke2);border-radius:20px;background:linear-gradient(150deg,#08172a,#0d2138);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:20px;text-align:center}
+.shape-prompt.show{background:radial-gradient(ellipse at 50% 20%,rgba(255,189,109,.15),transparent 70%),#08172a}
+.shape-word{font-size:clamp(56px,9vw,112px);font-weight:900;letter-spacing:.025em;line-height:1.3;color:var(--text);overflow-wrap:anywhere}
+.shape-prompt:not(.show) .shape-word{color:var(--subtle)}
+.shape-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.shape-actions .btn{min-height:62px;font-size:17px}
+@media(max-width:1050px){.sidebar{width:225px;min-width:225px}.number-lineup{gap:5px}.number-position{padding:8px 4px}}
+@media(max-width:800px){.mobile-nav{justify-content:flex-start;overflow-x:auto;scrollbar-width:thin;touch-action:pan-x}.mobile-nav .mob-link{min-width:75px;flex:0 0 75px}.number-lineup{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:560px){.number-lineup{grid-template-columns:repeat(2,minmax(0,1fr))}.shape-actions{grid-template-columns:1fr}.shape-word{font-size:clamp(44px,10vw,82px)}}
